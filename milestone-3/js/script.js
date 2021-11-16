@@ -15,34 +15,31 @@ for ( let i = 1; i <= 100; i++){
     console.log(i);
 
     let print;
-    let boxColor;
     if ( i % 3 === 0 && i % 5 === 0 ){
         print = ('fizzbuzz')
-        boxColor = ('fizzbuzz')
         console.log(print);
     } else if ( i % 3 === 0 ){
         print = ('fizz')
-        boxColor = ('fizz')
         console.log(print);
     } else if ( i % 5 === 0 ){
         print = ('buzz')
-        boxColor = ('buzz')
         console.log(print);
     } else{
         print = (i)
     }
 
-    const newBox = `
-          <div class="box ${boxColor}">${print}</div>
-    `;
-    console.log(newBox)
 
-    boxesContainer.innerHTML += newBox
-
-    // const newBox = document.createElement ('div')
-    // newBox.innerHTML = (print)
-    // newBox.classList.add('box');
+    // const newBox = `
+    //       <div class="box ${print}">${print}</div>
+    // `;
     // console.log(newBox)
 
-    // boxesContainer.append (newBox)
+    // boxesContainer.innerHTML += newBox
+
+    const newBox = document.createElement ('div')
+    newBox.innerHTML = (print)
+    newBox.classList.add("box", print);
+    console.log(newBox)
+
+    boxesContainer.append (newBox)
 }
