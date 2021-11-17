@@ -12,25 +12,27 @@
 const boxesContainer = document.querySelector('.container');
 
 for ( let i = 1; i <= 100; i++){
-    console.log(i);
 
     let print;
-    if ( i % 3 === 0 && i % 5 === 0 ){
-        print = ('fizzbuzz')
-        console.log(print);
+    let newDivColor;
+    if ( (i % 3 === 0) && (i % 5 === 0) ){
+        print = 'FizzBuzz';
+        newDivColor = 'violet-bg';
     } else if ( i % 3 === 0 ){
-        print = ('fizz')
-        console.log(print);
+        print = 'Fizz';
+        newDivColor = 'green-bg';
     } else if ( i % 5 === 0 ){
-        print = ('buzz')
-        console.log(print);
+        print = 'Buzz';
+        newDivColor = 'yellow-bg';
     } else{
-        print = (i)
+        print = i;
+        newDivColor = '';
     }
+    console.log(print);
 
-
+    //OUTPUT 
     // const newBox = `
-    //       <div class="box ${print}">${print}</div>
+    //       <div class="box ${newDivColor}">${print}</div>
     // `;
     // console.log(newBox)
 
@@ -38,7 +40,11 @@ for ( let i = 1; i <= 100; i++){
 
     const newBox = document.createElement ('div')
     newBox.innerHTML = (print)
-    newBox.classList.add("box", print);
+    newBox.classList.add('box');
+    // aggiungi newDivColor solo se non vuoto altrimenti add da errore
+    if(newDivColor !== '') {
+        newBox.classList.add(newDivColor);
+    }
     console.log(newBox)
 
     boxesContainer.append (newBox)

@@ -35,14 +35,14 @@ h1 {
     font-size: 20px;
 }
 
-.fizz{
+.green-bg{
     background-color: #0bd6a1;
 }
 
-.buzz{
+.yellow-bg{
     background-color: #ffd166;
 }
 
-.fizzbuzz{
+.violet-bg{
     background-color: #f0466f;
 }
