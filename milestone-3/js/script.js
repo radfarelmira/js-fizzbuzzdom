@@ -31,14 +31,10 @@ for ( let i = 1; i <= 100; i++){
     console.log(print);
 
     // OUTPUT
-    const newBox = document.createElement ('div')
-    newBox.innerHTML = (print)
-    newBox.classList.add('box');
-    // aggiungi newDivColor solo se non vuoto altrimenti add da errore
-    if(newDivColor !== '') {
-        newBox.classList.add(newDivColor);
-    }
+    const newBox = `
+          <div class="box ${newDivColor}">${print}</div>
+    `;
     console.log(newBox)
 
-    boxesContainer.append (newBox)
+    boxesContainer.innerHTML += newBox
 }
