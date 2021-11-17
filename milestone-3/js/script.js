@@ -30,14 +30,7 @@ for ( let i = 1; i <= 100; i++){
     }
     console.log(print);
 
-    //OUTPUT 
-    // const newBox = `
-    //       <div class="box ${newDivColor}">${print}</div>
-    // `;
-    // console.log(newBox)
-
-    // boxesContainer.innerHTML += newBox
-
+    // OUTPUT
     const newBox = document.createElement ('div')
     newBox.innerHTML = (print)
     newBox.classList.add('box');
